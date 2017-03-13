@@ -1,3 +1,4 @@
+var path = require('path');
 var express = require('express');
 var mongoose = require('mongoose');
 var app = express();
@@ -5,7 +6,7 @@ var app = express();
 mongoose.connect('mongodb://localhost/shortly');
 
 app.get('/', function (req, res) {
-  res.send(__dirname + '/client/index.html')
+  res.send(path.join(__dirname, 'client/index.html');)
 })
 
 app.listen(process.env.PORT || 3000, function () {
