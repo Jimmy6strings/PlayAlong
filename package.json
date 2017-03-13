@@ -1,0 +1,19 @@
+{
+  "name": "playalong",
+  "version": "1.0.0",
+  "description": "a music video app that allows you to play along with any song you find by providing the chord progressions and tabs\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jimmy6strings/PlayAlong.git"
+  },
+  "author": "james mitchell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jimmy6strings/PlayAlong/issues"
+  },
+  "homepage": "https://github.com/Jimmy6strings/PlayAlong#readme"
+}
