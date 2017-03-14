@@ -5,12 +5,12 @@ angular.module('player', [
 ])
 .config(function ($routeProvider) {
   $routeProvider
-    .when('/links', {
-      templateUrl: 'app/links/links.html',
+    .when('/', {
+      templateUrl: '/index.html',
       controller: 'LinksController'
     })
     .otherwise({
-      redirectTo: '/links'
+      redirectTo: '/'
     });
 });
 

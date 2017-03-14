@@ -2,39 +2,112 @@
 <!DOCTYPE html>
 <html ng-app='player'>
 <head>
-  <title>PlayAlongApp</title>
-  <link rel="stylesheet" type="text/css" href="styles/style.css" />
-
-</head>
-<body>
-
-
-<nav class="navigation">
-      <ul>
-        <li><h1>Videos</h1></li>
-        <li><a ui-sref-active="selected" href="#/links">Links</a></li>
-      </ul>
-    </nav>
-    <form name='shortlyForm' ng-submit="search()" novalidate>
-    <input name='link' type="url"
-      ng-model="link.url"/>
-      <button type="submit" value="Shorten">
-    add
-    </button>
-
-
-
-  </form>
-
-
-<div ng-view></div>
-
-  <script src="../node_modules/angular/angular.js"></script>
-  <script src="../node_modules/angular-route/angular-route.js"></script>
-  <script src="../node_modules/ng-video/dist/ng-video.js"></script>
-
-  <script src="app/services/services.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+<script src="https://code.angularjs.org/1.3.11/angular-route.js"></script>
+<script scr="https://www.youtube.com/iframe_api"></script>
+ <script src="app/services/services.js"></script>
   <script src="app/links/links.js"></script>
   <script src="app/app.js"></script>
+  <title>PlayAlongApp</title>
+  <link rel="stylesheet" type="text/css" href="/styles/style.css" />
+
+</head>
+<body ng-controller="youtubeCtrl">
+
+<h1 align="center">Play Along</h1>
+
+<youtube-video video-id='theBestVideo'></youtube-video>
+<div class="allVideos" align="center"></div>
+  <div class="firstVideo" align="center">
+    <iframe id="ytplayer" type="text/html" width="640" height="360"
+      src="https://www.youtube.com/embed/TLV4_xaYynY"
+      frameborder="0"></iframe>
+  </div>
+  <span class="guitarChordsJimi" align="center">
+      <p>
+      Cm  A#   G#  A#    Cm  A#  G#
+      </p>
+      <br>
+      <p>
+        "There must be some kind of way out of here,"  said the joker to the thief,
+      </p>
+</span>
+
+  <div class="secondVideo" align="center">
+    <iframe id="ytplayer" type="text/html" width="640" height="360"
+      src="https://www.youtube.com/embed/G58XWF6B3AA"
+      frameborder="0"></iframe>
+  </div>
+   <span class="guitarChordsBob" align="center">
+      <p>
+      F       Bb           F  F          Bb        C
+      </p>
+      <br>
+      <p>
+        "How many roads must a man walk down, Before you call him a man?"
+      </p>
+</span>
+
+  <div class="thirdVideo" align="center">
+    <iframe id="ytplayer" type="text/html" width="640" height="360"
+      src="https://www.youtube.com/embed/5ZYgIrqELFw"
+      frameborder="0"></iframe>
+  </div>
+   <span class="guitarChords" align="center">
+      <p>
+      G           D           Am             C  G                  D           Am   C
+      </p>
+      <br>
+      <p>
+        "Somebody once told me the world is gonna roll me I ain't the sharpest tool in the shed
+      </p>
+</span>
+
+  <div class="fourthVideo" align="center">
+    <iframe id="ytplayer" type="text/html" width="640" height="360"
+      src="https://www.youtube.com/embed/fw-QRyQcFH8"
+      frameborder="0"></iframe>
+  </div>
+</div>
+
+<span class="guitarChords" align="center">
+      <p>
+
+          B                            D E                               A                  A# B                            D
+      </p>
+      <br>
+      <p>
+        I'll tell you what I want, what I really really want
+        So tell me what you want, what you really really want
+        I'll tell you what I want, what I really really want
+        So tell me what you want, what you really really want
+      </p>
+</span>
+
+
+
+    <!-- <form name='shortlyForm'>
+      <button type="submit" ng-click="search()">
+      add
+      </button>
+
+      <section class="video" ng-video>
+      <br>
+      <br>
+      <video vi-screen></video>
+
+      </section>
+    </form> -->
+
+
+
+
+
+
+<!-- <div ng-view></div> -->
+
+
+
+
 </body>
 </html>
