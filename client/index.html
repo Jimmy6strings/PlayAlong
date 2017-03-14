@@ -4,9 +4,10 @@
 <head>
   <title>PlayAlongApp</title>
   <link rel="stylesheet" type="text/css" href="styles/style.css" />
+
 </head>
 <body>
-hello world!
+
 
 <nav class="navigation">
       <ul>
@@ -14,9 +15,26 @@ hello world!
         <li><a ui-sref-active="selected" href="#/links">Links</a></li>
       </ul>
     </nav>
+    <form name='shortlyForm' ng-submit="search()" novalidate>
+    <input name='link' type="url"
+      ng-model="link.url"/>
+      <button type="submit" value="Shorten">
+    add
+    </button>
+
+
+
+  </form>
+
+
 <div ng-view></div>
 
+  <script src="../node_modules/angular/angular.js"></script>
+  <script src="../node_modules/angular-route/angular-route.js"></script>
+  <script src="../node_modules/ng-video/dist/ng-video.js"></script>
 
-<script src="app/app.js"></script>
+  <script src="app/services/services.js"></script>
+  <script src="app/links/links.js"></script>
+  <script src="app/app.js"></script>
 </body>
 </html>

@@ -1,9 +1,16 @@
-angular.module('player', ['player.links'])
-
-.config(function ($routeProvider, $httpProvider) {
+angular.module('player', [
+  'player.services',
+  'player.links',
+  'ngRoute'
+])
+.config(function ($routeProvider) {
   $routeProvider
-  .when('/', {
-    templateUrl: 'app/index.html',
-    controller: 'LinksController'
-  })
-})
+    .when('/links', {
+      templateUrl: 'app/links/links.html',
+      controller: 'LinksController'
+    })
+    .otherwise({
+      redirectTo: '/links'
+    });
+});
+

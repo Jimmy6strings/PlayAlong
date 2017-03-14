@@ -6,7 +6,7 @@ var app = express();
 mongoose.connect('mongodb://localhost/shortly');
 
 app.get('/', function (req, res) {
-  res.send(path.join(__dirname, 'client/index.html');)
+  res.send('client/index.html');
 })
 
 app.listen(process.env.PORT || 3000, function () {
